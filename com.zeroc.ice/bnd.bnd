@@ -1,0 +1,15 @@
+Bundle-Version: 3.7.2
+src: src,slice-generated
+Bundle-Name: ZeroC ICE
+Bundle-Description: Internet Communication Engine
+Bundle-SymbolicName: com.zeroc.ice
+Automatic-Module-Name: com.zeroc.ice
+Bundle-Vendor: Andrei
+Bundle-ContactAddress: akabanov57@gmail.com
+Bundle-DocURL: www.zeroc.com
+Export-Package: \
+	com.zeroc.Ice,\
+	com.zeroc.Ice.Instrumentation,\
+	com.zeroc.IceInternal,\
+	com.zeroc.IceUtilInternal,\
+	com.zeroc.IceMX
