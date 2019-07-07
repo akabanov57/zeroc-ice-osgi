@@ -13,3 +13,4 @@ Export-Package: \
 	com.zeroc.IceInternal,\
 	com.zeroc.IceUtilInternal,\
 	com.zeroc.IceMX
+-buildpath: osgi.cmpn
