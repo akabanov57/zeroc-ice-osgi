@@ -1,0 +1,9 @@
+Bundle-Version: 1.0.0
+Bundle-Name: ICE API
+Bundle-Description: ICE API
+Bundle-SymbolicName: org.home.remote.hello.api
+Automatic-Module-Name: org.home.remote.hello.api
+-buildpath: com.zeroc.ice;version=latest
+Export-Package: \
+	org.home.remote.hello,\
+	org.home.remote.hello.api

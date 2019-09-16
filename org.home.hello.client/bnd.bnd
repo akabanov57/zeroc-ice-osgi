@@ -1,0 +1,11 @@
+Bundle-Version: 1.0.0
+Bundle-Name: Hello Client
+Bundle-Description: Uses Hello Service
+Bundle-Vendor: Andrei Kabanov
+Bundle-ContactAddress: akabanov57@gmail.com
+Bundle-SymbolicName: org.home.hello.client
+Automatic-Module-Name: org.home.hello.client
+-buildpath: \
+	org.home.hello.api;version=latest,\
+	osgi.cmpn,\
+	org.apache.felix.gogo.runtime

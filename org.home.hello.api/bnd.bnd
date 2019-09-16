@@ -1,0 +1,8 @@
+Bundle-Version: 1.0.0
+Bundle-Name: Demo Hello API
+Bundle-Description: Demo Hello API
+Bundle-Vendor: Andrei Kabanov
+Bundle-ContactAddress: akabanov57@gmail.com
+Bundle-SymbolicName: org.home.hello.api
+Automatic-Module-Name: org.home.hello.api
+Export-Package: org.home.hello.api

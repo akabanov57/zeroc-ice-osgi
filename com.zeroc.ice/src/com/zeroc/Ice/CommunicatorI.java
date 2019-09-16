@@ -4,14 +4,6 @@
 
 package com.zeroc.Ice;
 
-import java.util.Map;
-
-import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ConfigurationPolicy;
-import org.osgi.service.component.annotations.Deactivate;
-
-@Component(name="com.zeroc.ice.communicator", service=Communicator.class, configurationPolicy=ConfigurationPolicy.REQUIRE,immediate=true)
 public final class CommunicatorI implements Communicator
 {
     @Override
@@ -21,7 +13,6 @@ public final class CommunicatorI implements Communicator
         _instance.destroy(false); // Don't allow destroy to be interrupted if called from try with statement.
     }
 
-    @Deactivate
     @Override
     public void
     destroy()
@@ -99,7 +90,8 @@ public final class CommunicatorI implements Communicator
         return _instance.proxyFactory().proxyToProperty(proxy, prefix);
     }
 
-    @Override public Identity
+    @Override @SuppressWarnings("deprecation")
+    public Identity
     stringToIdentity(String s)
     {
         return Util.stringToIdentity(s);
@@ -304,19 +296,7 @@ public final class CommunicatorI implements Communicator
     {
         _instance = new com.zeroc.IceInternal.Instance(this, initData);
     }
-    
-    public CommunicatorI() {
-    }
 
-    @Activate
-    void activate(Map<String,?> configProps) {
-    	InitializationData initData = new InitializationData();
-    	initData.properties = new PropertiesI();
-   		configProps.forEach((k,v)->initData.properties.setProperty(k, v.toString()));
-    	_instance = new com.zeroc.IceInternal.Instance(this, initData);
-    	finishSetup(new String[0], null);
-    }
-    
     /**
       * For compatibility with C#, we do not invoke methods on other objects
       * from within a finalizer.

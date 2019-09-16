@@ -1,0 +1,11 @@
+Bundle-Version: 1.0.0
+Bundle-Name: Hello API Implementation
+Bundle-Description: Hello API Implementation
+Bundle-Vendor: Andrei Kabanov
+Bundle-ContactAddress: akabanov57@gmail.com
+Bundle-SymbolicName: org.home.hello.service
+Automatic-Module-Name: org.home.hello.service
+-buildpath: \
+	org.home.hello.api;version=latest,\
+	osgi.cmpn
+-privatepackage: org.home.hello.service

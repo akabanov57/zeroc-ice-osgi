@@ -1,0 +1,12 @@
+Bundle-Version: 1.0.0
+Bundle-Name: Remote Hello Client
+Bundle-Description: Remote Hello Client
+Bundle-SymbolicName: org.home.remote.hello.client
+Automatic-Module-Name: org.home.remote.hello.client
+-buildpath: \
+	org.home.hello.api;version=latest,\
+	org.home.remote.hello.api;version=latest,\
+	osgi.cmpn,\
+	com.zeroc.ice;version=latest,\
+	osgi.core
+-privatepackage: org.home.remote.hello.client

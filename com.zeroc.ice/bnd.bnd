@@ -1,10 +1,10 @@
-Bundle-Version: 3.7.2
+Bundle-Version: 3.7.3
 src: src,slice-generated
 Bundle-Name: ZeroC ICE
 Bundle-Description: Internet Communication Engine
 Bundle-SymbolicName: com.zeroc.ice
 Automatic-Module-Name: com.zeroc.ice
-Bundle-Vendor: Andrei
+Bundle-Vendor: Andrei Kabanov
 Bundle-ContactAddress: akabanov57@gmail.com
 Bundle-DocURL: www.zeroc.com
 Export-Package: \
@@ -13,4 +13,8 @@ Export-Package: \
 	com.zeroc.IceInternal,\
 	com.zeroc.IceUtilInternal,\
 	com.zeroc.IceMX
--buildpath: osgi.cmpn
+-includeresource: \
+	META-INF=resources
+	
+Bundle-License: https://github.com/zeroc-ice/ice/blob/3.7/ICE_LICENSE
+-privatepackage: com.zeroc.IceSSL

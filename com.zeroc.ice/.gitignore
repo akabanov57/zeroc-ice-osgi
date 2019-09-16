@@ -1,4 +1,5 @@
 /bin/
 /generated/
-/slice-generated/
+/slice-generated/com/*
 .settings/
+/bin_test/

@@ -1,0 +1,11 @@
+Bundle-Version: 1.0.0
+Bundle-Name: Remote Hello Service
+Bundle-Description: Hello Service Wrapper
+Bundle-SymbolicName: org.home.remote.hello.service
+Automatic-Module-Name: org.home.remote.hello.service
+-buildpath: \
+	com.zeroc.ice;version=latest,\
+	osgi.cmpn,\
+	org.home.remote.hello.api;version=latest,\
+	org.home.hello.api;version=latest
+-privatepackage: org.home.remote.hello.service
