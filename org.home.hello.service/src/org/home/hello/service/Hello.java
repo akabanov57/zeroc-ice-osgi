@@ -10,7 +10,7 @@ public class Hello implements IHello {
 
 	@Override
 	public String sayHello(String name) {
-	    final String greetingName = Objects.requireNonNull(name, "name is null.").strip();
+	    final String greetingName = Objects.requireNonNull(name, "name is null.").trim();
 	    if (greetingName.isEmpty()) {
 	        throw new IllegalArgumentException("name is empty.");
 	    }

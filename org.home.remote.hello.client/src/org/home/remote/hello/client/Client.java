@@ -27,8 +27,8 @@ public class Client implements IHello {
     	InitializationData initData = new InitializationData();
     	initData.properties = Util.createProperties();
    		props.forEach((k,v)->initData.properties.setProperty(k, v.toString()));
-   		final String defaultPackage = initData.properties.getProperty("Ice.Default.Package");
-   		initData.classLoader = defaultPackage == null ? new IceRuntimeClassLoader(ctx.getBundle()) : new IceRuntimeClassLoader(ctx.getBundle(),defaultPackage);
+//   		final String defaultPackage = initData.properties.getProperty("Ice.Default.Package");
+//   		initData.classLoader = defaultPackage == null ? new IceRuntimeClassLoader(ctx.getBundle()) : new IceRuntimeClassLoader(ctx.getBundle(),defaultPackage);
    		communicator = Util.initialize(initData);
         helloPrx = IRemoteHelloPrx.checkedCast(communicator.propertyToProxy("Hello.Proxy"));//.ice_twoway().ice_secure(true);
 	}

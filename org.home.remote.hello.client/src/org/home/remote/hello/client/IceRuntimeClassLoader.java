@@ -22,7 +22,7 @@ public class IceRuntimeClassLoader extends ClassLoader {
     
     public IceRuntimeClassLoader(Bundle bundle, String defaultPackage) {
         this.bundle = Objects.requireNonNull(bundle, "bundle is null.");
-        this.defaultPackage = defaultPackage == null || defaultPackage.isBlank() ? "" : defaultPackage.strip();
+//        this.defaultPackage = defaultPackage == null || defaultPackage.isBlank() ? "" : defaultPackage.strip();
     }
 
     @Override

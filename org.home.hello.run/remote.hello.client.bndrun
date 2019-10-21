@@ -1,5 +1,5 @@
 -runfw: org.apache.felix.framework;version='[6.0.3,6.0.3]'
--runee: JavaSE-12
+-runee: JavaSE-13
 -runrequires: \
 	bnd.identity;id='org.apache.felix.gogo.runtime',\
 	bnd.identity;id='org.apache.felix.gogo.command',\
@@ -10,7 +10,9 @@
 	bnd.identity;id='com.zeroc.ice',\
 	bnd.identity;id='org.home.hello.api',\
 	bnd.identity;id='org.home.hello.client',\
-	bnd.identity;id='org.home.remote.hello.client'
+	bnd.identity;id='org.home.remote.hello.client',\
+	bnd.identity;id='org.ops4j.pax.logging.pax-logging-api',\
+	bnd.identity;id='org.ops4j.pax.logging.pax-logging-service'
 -runbundles: \
 	com.zeroc.ice;version='[3.7.3,3.7.4)',\
 	org.apache.felix.configadmin;version='[1.9.16,1.9.17)',\
@@ -24,5 +26,7 @@
 	org.home.remote.hello.api;version='[1.0.0,1.0.1)',\
 	org.home.remote.hello.client;version='[1.0.0,1.0.1)',\
 	org.osgi.util.function;version='[1.1.0,1.1.1)',\
-	org.osgi.util.promise;version='[1.1.1,1.1.2)'
+	org.osgi.util.promise;version='[1.1.1,1.1.2)',\
+	org.ops4j.pax.logging.pax-logging-api;version='[1.11.0,1.11.1)',\
+	org.ops4j.pax.logging.pax-logging-service;version='[1.11.0,1.11.1)'
 -runvm: -Djavax.net.debug=ssl:handshake -Djdk.tls.client.protocols=TLSv1.2

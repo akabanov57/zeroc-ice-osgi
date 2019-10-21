@@ -4,9 +4,15 @@
 
 package com.zeroc.IceSSL;
 
-import java.nio.*;
-import javax.net.ssl.*;
-import javax.net.ssl.SSLEngineResult.*;
+import java.nio.Buffer;
+import java.nio.ByteBuffer;
+
+import javax.net.ssl.SSLEngineResult;
+import javax.net.ssl.SSLEngineResult.HandshakeStatus;
+import javax.net.ssl.SSLEngineResult.Status;
+import javax.net.ssl.SSLException;
+import javax.net.ssl.SSLSession;
+
 import com.zeroc.IceInternal.SocketOperation;
 
 final class TransceiverI implements com.zeroc.IceInternal.Transceiver
@@ -142,12 +148,12 @@ final class TransceiverI implements com.zeroc.IceInternal.Transceiver
                 //
             }
 
-//            try
-//            {
-//                _engine.closeInbound();
-//            }
-//            catch(SSLException ex)
-//            {
+            try
+            {
+                _engine.closeInbound();
+            }
+            catch(SSLException ex)
+            {
                 //
                 // SSLEngine always raises an exception with this message:
                 //
@@ -157,7 +163,9 @@ final class TransceiverI implements com.zeroc.IceInternal.Transceiver
                 // For now, we'll ignore this exception.
                 //
                 //_instance.logger().error("IceSSL: error during close\n" + ex.getMessage());
-//            }
+            } catch (Exception ex1) {
+                
+            }
         }
 
         _delegate.close();
@@ -418,6 +426,9 @@ final class TransceiverI implements com.zeroc.IceInternal.Transceiver
                     status = result.getHandshakeStatus();
                     break;
                 }
+                case NEED_UNWRAP_AGAIN:
+                    System.err.println("Need Unwrap Again.");
+                    break;
                 }
 
                 if(result != null)

@@ -12,9 +12,9 @@ Export-Package: \
 	com.zeroc.Ice.Instrumentation,\
 	com.zeroc.IceInternal,\
 	com.zeroc.IceUtilInternal,\
-	com.zeroc.IceMX
+	com.zeroc.IceMX,\
+	com.zeroc.IceSSL
 -includeresource: \
 	META-INF=resources
 	
 Bundle-License: https://github.com/zeroc-ice/ice/blob/3.7/ICE_LICENSE
--privatepackage: com.zeroc.IceSSL
